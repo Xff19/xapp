@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title>123</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <!-- <a type="button" href="bnpl://jp.app/bnplapp?activity=LoginActivity" class="favorite styled" target="_blank"> 
+            Bnplへ遷移
+        </a> -->
+        <a onClick="javascript:try_to_open_app();" class="favorite styled"
+          >Bnplへ遷移</a
+        >
+      </div>
+    </div>
+  </body>
+  <script language="javascript">
+    let app = "bnpl://jp.app/bnplapp?activity=LoginActivity&phone=08073008003";
+    let appstore =
+      "https://play.google.com/store/apps/details?id=com.noahliu.noisemeter";
+    let newPage = "http://192.168.1.191:63893/Test2.html";
+
+    function try_to_open_app() {
+      window.open(newPage);
+    }
+  </script>
+
+  <!-- bnpl://jp.app/bnplapp?activity=LoginActivity -->
+  <!-- https://play.google.com/store/apps/details?id=com.noahliu.noisemeter -->
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title>無題</title>
+    <a href="http://apps.apple.com/jp/app/id1435783608"></a>
+  </head>
+  <body onload="open_app()"></body>
+  <script language="javascript">
+    const userAgent = navigator.userAgent || navigator.vendor; // 端末情報取得
+    function open_app() {
+      // 端末判断
+      if (/android/i.test(userAgent)) {
+        // androidの場合
+        let app =
+          "bnpl://jp.app/bnplapp?activity=LoginActivity&phone=08073008003";
+        let appstore =
+          "https://play.google.com/store/apps/details?id=com.noahliu.noisemeter";
+        //アプリ喚起
+        setTimeout(function () {
+          window.location.href = app;
+          //Delay　2秒
+          setTimeout(function () {
+            //アプリストア喚起
+            window.location.href = appstore;
+            //Delay 1秒
+            setTimeout(function () {
+              //画面閉じる
+              window.close();
+            }, 1000);
+          }, 2000);
+        }, 2000);
+      } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+        // iosの場合
+        window.location.href = "http://apps.apple.com/jp/app/id1435783608"; // appstoreへ遷移する
+      }
+    }
+  </script>
+
+  <!-- bnpl://jp.app/bnplapp?activity=LoginActivity -->
+  <!-- https://play.google.com/store/apps/details?id=com.noahliu.noisemeter -->
+</html>
